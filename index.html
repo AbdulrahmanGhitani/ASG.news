@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+
+     <!-- Mean Template css file -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- link font awesman library -->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container flex">
+
+            <div class="logo">
+                <a href="#" onclick="reload()"><img src="image/logo.png" alt="LOGO"></a>
+            </div>
+            <div class="links">
+                <ul class="line flex">
+                    <li id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button> 
+                <span class="toggle_btn">
+                    <i class="fas fa-bars"></i>
+                </span> 
+                <div class="links">
+                    <ul class="dropdown-menu">
+                        <li id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                        <li id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                        <li id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                        <li id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <main>
+        <div class="cards-container container " id="cards-container">
+        </div>
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the Title</h3>
+                    <h6 class="news-source " id="news-source">End Gadget 26/08/2023</h6>
+                    <p class="news-desc" id="news-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis facere dicta amet, quas illum facilis laudantium voluptatibus, velit repellendus delectus similique fugit nam voluptate ipsa at inventore nobis alias voluptatem.</p>
+                </div>
+            </div>
+        </template>
+    </main>
+
+    <!-- Start footer  -->
+    <footer class="footer">
+        <div class="container">
+        &copy; 2023 <span>A.S.G</span> All Right Reserved
+    </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
