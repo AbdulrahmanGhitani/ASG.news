@@ -111,12 +111,12 @@ function sortNewsBySelectedOption() {
     const selectedOption = sortSelect.value;
 
     if (selectedOption === "newest") {
-        sortNewsByDate(true); // Sort by newest date
+        sortNewsByDate(true); 
     } else if (selectedOption === "oldest") {
-        sortNewsByDate(false); // Sort by oldest date
+        sortNewsByDate(false); 
     }
-    else if (selectedOption === "sort") {
-        reload()
+    else if (selectedOption === "normal") {
+        reload();
     }
 }
 
