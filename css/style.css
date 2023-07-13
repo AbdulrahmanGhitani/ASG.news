@@ -93,11 +93,11 @@ ul{
 
 .header .links{
     position: relative;
+    cursor: pointer;
 }
 .header .links .line li:hover,
 .header .links .dropdown-menu li:hover{
-    color: var(--secondary-text-color);
-    
+    color: var(--secondary-text-color);    
 }
 .header .links .line li:active,
 .header .links .dropdown-menu li:active{
