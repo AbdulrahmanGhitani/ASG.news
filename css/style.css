@@ -229,6 +229,7 @@ ul{
     .header .toggle_btn{
         margin-left: 0;
         font-size: 25px;
+        margin-top: 2px;
     }
     .header .search-bar .selected-sort {
         width: 75px;
