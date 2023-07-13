@@ -21,7 +21,7 @@ body{
 }
 p{
     font-family: "Roboto", sans-serif;
-    color: var(--secondary-text-color);
+/*     color: var(--secondary-text-color); */
     line-height: 1.4rem;
 }
 a{
@@ -94,6 +94,7 @@ ul{
 .header .links{
     position: relative;
     cursor: pointer;
+    color: #3e0668;
 }
 .header .links .line li:hover,
 .header .links .dropdown-menu li:hover{
@@ -126,9 +127,10 @@ ul{
     width:100px;
     height: 100%;
     padding-inline:12px;
-    border: 2px solid #bbd0e2;
+    border: 2px solid #3e0668;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
+    outline-color: #bbd0e2;
 }
 
 
@@ -136,12 +138,12 @@ ul{
     width:200px;
     height: 100%;
     padding-inline:12px;
-    border: 2px solid #bbd0e2;
+    border: 2px solid #3e0668;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
 }
 .header .search-bar button{
-    background-color: var(--acent-color);
+    background-color: #3e0668;
     color: white;
     padding: 8px 20px;
     border:none;
@@ -261,6 +263,8 @@ main{
     box-shadow: 1px 1px 20px #d4ecff;
     background-color: #f9fdff;
     transform: translateY(-4px);
+    background-color: #3e0668;
+    color: white;
 }
 .card-header img{
     width: 100%;
@@ -283,7 +287,7 @@ main{
 
  /* Start footer  */
  .footer{
-    background-color: #2c4755;
+    background-color: #3e0668;
     color: white;
     font-size: 18px;
     padding: 20px 10px;
