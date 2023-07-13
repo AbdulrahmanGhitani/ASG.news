@@ -15,7 +15,7 @@ Welcome to the A.S.G News Website! This website brings you the latest news from 
 
 - **Responsive Design:** The website is fully responsive, ensuring optimal viewing and interaction across a wide range of devices, including desktops, laptops, tablets, and mobile phones.
 ## Take a tour
-Follow this link https://drive.google.com/file/d/1DoyQFH3LvIzA6OaY0TasoT-aUAYnMB-m/view?usp=drive_link and show short video
+Follow this link https://drive.google.com/file/d/144au0dcISCRswn0KISApDdwM35r5LsQ1/view?usp=drive_link and show short video
 ## Getting Started
 
 To run the Awesome News Website on your local machine, follow these steps:
