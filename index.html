@@ -26,14 +26,22 @@
                     <li id="technology" onclick="onNavItemClick('technology')">Technology</li>
                 </ul>
             </div>
+
             <div class="search-bar flex">
+                <select class="selected-sort" id="sort-select">
+                    <option value="sort" >Sort</option>
+                    <option value="newest">Newest Date</option>
+                    <option value="oldest">Oldest Date</option>
+                </select>
+                
                 <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
                 <button id="search-button" class="search-button">Search</button> 
+
                 <span class="toggle_btn">
                     <i class="fas fa-bars"></i>
                 </span> 
-                <div class="links">
-                    <ul class="dropdown-menu">
+                <div class="links ">
+                    <ul class=" dropdown-menu">
                         <li id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
                         <li id="politics" onclick="onNavItemClick('politics')">Politics</li>
                         <li id="finance" onclick="onNavItemClick('finance')">Finance</li>

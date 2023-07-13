@@ -39,7 +39,6 @@ function reload() {
 }
 
 async function fetchNews(query) {
-
     const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
     const data = await res.json();
     bindData(data.articles);
@@ -51,13 +50,15 @@ function bindData(articles) {
 
     cardsContainer.innerHTML = "";
 
-    articles.forEach((article) => {
+    articles.forEach((article, index) => {
         if (!article.urlToImage) return;
         const cardClone = newsCardTemplate.content.cloneNode(true);
         fillDataInCard(cardClone, article);
+        cardClone.firstElementChild.id = `news-card-${index}`; // Add unique ID to each cloned card
         cardsContainer.appendChild(cardClone);
     });
 }
+
 function fillDataInCard(cardClone, article) {
     const newsImg = cardClone.querySelector("#news-img");
     const newsTitle = cardClone.querySelector("#news-title");
@@ -84,6 +85,7 @@ function onNavItemClick(id) {
     curSelectedNav?.classList.remove("active");
     curSelectedNav = navItem;
     curSelectedNav.classList.add("active");
+    //for dropdown menu
     dropDownMenu.classList.remove('open');
     updateIcon(); 
 
@@ -101,13 +103,37 @@ searchButton.addEventListener("click", () => {
     curSelectedNav = null;
 });
 
-async function sortData(query, method){
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const data = await res.json();
-    let articles = data.articles.sort(method);
-    console.log(articles);
-    bindData(articles);
+
+const sortSelect = document.getElementById("sort-select");
+sortSelect.addEventListener("change", sortNewsBySelectedOption);
+
+function sortNewsBySelectedOption() {
+    const selectedOption = sortSelect.value;
+
+    if (selectedOption === "newest") {
+        sortNewsByDate(true); // Sort by newest date
+    } else if (selectedOption === "oldest") {
+        sortNewsByDate(false); // Sort by oldest date
+    }
+    else if (selectedOption === "sort") {
+        reload()
+    }
 }
-function newlast(a, b){
-    return new Date (a.publishedAt).valueOf() - new Date (b.publishedAt).valueOf();
+
+function sortNewsByDate(sortByNewest) {
+    const cardsContainer = document.getElementById("cards-container");
+    const articles = Array.from(cardsContainer.children);
+
+    articles.sort((a, b) => {
+        const dateA = new Date(a.querySelector("#news-source").textContent.split("·")[1].trim());
+        const dateB = new Date(b.querySelector("#news-source").textContent.split("·")[1].trim());
+
+        if (sortByNewest) {
+            return dateB - dateA; // Sort in descending order (newest date first)
+        } else {
+            return dateA - dateB; // Sort in ascending order (oldest date first)
+        }
+    });
+
+    articles.forEach((article) => cardsContainer.appendChild(article));
 }
