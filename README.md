@@ -22,7 +22,7 @@ To run the Awesome News Website on your local machine, follow these steps:
 
 1. Clone the repository: https://github.com/AbdulrahmanGhitani/ASG.news
 2. Navigate to the project directory: `ASG.news`
-3. Open the `index.html` file in your preferred web browser `use Live Server`.
+3. Open the `index.html` file in your preferred web browser `useing Live Server`.
 
 That's it! You should now be able to access the Awesome News Website locally.
 
